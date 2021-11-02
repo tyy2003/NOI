@@ -38,7 +38,7 @@ int main()
 
 ![3](https://tyy.tanyaodan.com/ch0101/3.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -55,7 +55,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0101/4.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -72,7 +72,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0101/5.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -85,11 +85,13 @@ int main()
 
 ------
 
+### 06:空格分隔输出
+
 ![](https://tyy.tanyaodan.com/ch0101/6.1.png)
 
 ![](https://tyy.tanyaodan.com/ch0101/6.2.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -112,18 +114,16 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0101/7.2.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
     double a;
     scanf("%lf", &a);
-
     printf("%f\n", a);
     printf("%.5f\n", a);
     printf("%e\n", a);
     printf("%g", a);
-
     return 0;
 }
 ```
@@ -134,7 +134,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0101/8.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -143,7 +143,6 @@ int main()
     printf("  %c\n", a);
     printf(" %c%c%c\n", a, a, a);
     printf("%c%c%c%c%c", a, a, a, a, a);
-
     return 0;
 }
 ```
@@ -154,7 +153,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0101/9.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -178,13 +177,12 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0102/1.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
     int a;
     short s;
-
     printf("%d",sizeof(a));
     printf(" %d", sizeof(s));
     return 0;
@@ -197,13 +195,12 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0102/2.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
     float a;
     double s;
-
     printf("%d %d", sizeof(a), sizeof(s));
     return 0;
 }
@@ -215,15 +212,13 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0102/3.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
     _Bool a;
     char s;
-
     printf("%d %d", sizeof(a), sizeof(s));
-
     return 0;
 }
 ```
@@ -236,7 +231,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0102/4.2.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -253,7 +248,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0102/5.2.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -268,7 +263,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0102/6.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -287,7 +282,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0102/7..png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -306,7 +301,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0102/8.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -326,7 +321,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0102/9.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -346,11 +341,10 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0102/10.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
-
     printf("%d", sizeof("Hello, World!"));
     return 0;
 }
@@ -364,7 +358,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/1.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -382,7 +376,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/2.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -400,7 +394,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/3.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -418,7 +412,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/4.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -437,7 +431,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/5.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -456,7 +450,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/6.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -474,7 +468,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/7.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -482,7 +476,6 @@ int main()
     scanf("%lf %lf %lf %lf %lf", &x, &a, &b, &c, &d);
     ans = a*x*x*x + b*x*x + c*x + d;
     printf("%.7lf", ans);
-
     return 0;
 }
 ```
@@ -493,7 +486,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/8.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -511,7 +504,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/9.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -522,7 +515,6 @@ int main()
     c = 2*pi*r;
     s = pi*r*r;
     printf("%.4lf %.4lf %.4lf", d, c, s);
-
     return 0;
 }
 ```
@@ -533,7 +525,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/10.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -551,7 +543,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/11.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -571,7 +563,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/12.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -590,7 +582,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/13.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -611,7 +603,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/14..png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -630,7 +622,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/15.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -658,7 +650,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/16..png)
 
-```
+```c
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -677,11 +669,37 @@ int main()
 
 ------
 
-### ?17:计算三角形面积
+### ★17:计算三角形面积
 
 ![](https://tyy.tanyaodan.com/ch0103/17.png)
 
+```c
+#include <stdio.h>
+#include <math.h>
 
+//计算俩个坐标点之间的长度
+double lenOfSide(float x1, float y1, float x2, float y2)
+{
+    double x = (x1-x2);
+    double y = (y1-y2);
+    return sqrt(x*x+y*y);
+}
+
+int main()
+{
+    float x1, x2, x3, y1, y2, y3;
+    scanf("%f %f %f %f %f %f", &x1, &y1, &x2, &y2, &x3, &y3);
+    //已知三角形的三个顶点坐标，先求三条边的长度
+    double a = lenOfSide(x1, y1, x2, y2);
+    double b = lenOfSide(x1, y1, x3, y3);
+    double c = lenOfSide(x2, y2, x3, y3);
+    //海伦-秦九韶公式
+    double p = (a+b+c)/2;
+    double area = sqrt(p*(p-a)*(p-b)*(p-c));
+    printf("%.2lf", area);
+    return 0;
+}
+```
 
 ------
 
@@ -689,7 +707,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/18.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -709,7 +727,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/19.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -717,7 +735,6 @@ int main()
     long long int ans;
     scanf("%lld %lld", &a, &b);
     printf("%lld", a*b);
-
     return 0;
 }
 ```
@@ -728,7 +745,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0103/20.png)
 
-```
+```c
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -749,7 +766,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/1.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -770,7 +787,6 @@ int main()
     {
         printf("zero");
     }
-
     return 0;
 }
 ```
@@ -781,7 +797,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/2..png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -797,7 +813,6 @@ int main()
         ans = a;
         printf("%.2f", ans);
     }
-
     return 0;
 }
 ```
@@ -808,7 +823,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/3.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -832,7 +847,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/4.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -857,7 +872,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/5.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -888,7 +903,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/6.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -912,7 +927,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/7.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -926,7 +941,6 @@ int main()
     {
         printf("0");
     }
-
     return 0;
 }
 ```
@@ -937,7 +951,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/8.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -961,7 +975,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/9.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -1028,7 +1042,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/10.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -1054,7 +1068,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/11.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -1094,7 +1108,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/12.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -1125,7 +1139,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/13.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -1152,11 +1166,33 @@ int main()
 
 ------
 
-### ？14:计算邮资
+### ★14:计算邮资
 
 ![](https://tyy.tanyaodan.com/ch0104/14.png)
 
+```c
+#include <stdio.h>
+#include <math.h>
 
+int main()
+{
+    int n;
+    char ch;
+    scanf("%d %c", &n, &ch);
+    int sum = 8;
+    if(n > 1000)
+    {
+        double t = n - 1000;
+        sum += ceil(t/500)*4;  //向上取整, 如ceil(4.1)=5
+    }
+    if(ch == 'y')
+    {
+        sum += 5;
+    }
+    printf("%d\n", sum);
+    return 0;
+}
+```
 
 ------
 
@@ -1164,7 +1200,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/15.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -1200,9 +1236,30 @@ int main()
 
 ------
 
-### ?16:三角形判断
+### ★16:三角形判断
 
 ![](https://tyy.tanyaodan.com/ch0104/16.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c; //题目说了三个输入是正整数
+    scanf("%d %d %d", &a, &b, &c);
+    //小学数学题 三角形的任意两边之和大于第三边
+    //注意任意两个字 两边之和大于第三边 所以是用 && 拼接
+    if(a+b>c && a+c>b && b+c>a)
+    {
+        printf("yes");
+    }
+    else
+    {
+        printf("no");
+    }
+    return 0;
+}
+```
 
 ------
 
@@ -1210,7 +1267,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/17.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -1238,6 +1295,25 @@ int main()
     return 0;
 }
 ```
+优质代码
+
+```c
+#include <stdio.h>
+
+int leapYear(int n)
+{
+    // 除以4余数得0且模除100不得0 但是模除400又得0
+    return (n%4==0 && n%100!=0) || n%400==0;
+}
+
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    printf("%c\n", leapYear(a) ? 'Y' : 'N');
+    return 0;
+}
+```
 
 ------
 
@@ -1245,7 +1321,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/18.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -1269,7 +1345,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0104/19.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -1310,13 +1386,13 @@ int main()
 
 ------
 
-### *20:求一元二次方程的根
+### ★20:求一元二次方程的根
 
 ![](https://tyy.tanyaodan.com/ch0104/20.1.png)
 
 ![](https://tyy.tanyaodan.com/ch0104/20.2.png)
 
-```
+```c
 #include <stdio.h>
 #include <math.h>
 
@@ -1370,11 +1446,32 @@ int main()
 
 ------
 
-### ？21:苹果和虫子2
+### ★★21:苹果和虫子2
 
 ![](https://tyy.tanyaodan.com/ch0104/21.png)
 
+```c
+#include <stdio.h>
+#include <math.h>
 
+int main()
+
+{
+    int n, x, y;
+    scanf("%d %d %d", &n, &x, &y);
+    int ans;
+    if(x == 0) //如果不加这个条件x=0时会溢出 如10 0 9
+    {
+        ans = n;
+    }
+    else
+    {
+        ans = n - ceil((double)y/x);
+    }
+    printf("%d\n", ans>0 ? ans : 0); //ans小于0时要赋值为0 不能为负数
+    return 0;
+}
+```
 
 ------
 
@@ -1384,7 +1481,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/1..png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -1414,7 +1511,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/2.2.png)
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -1437,11 +1534,10 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/3..png)
 
-```
+```c
 #include <stdio.h>
 
 int main()
-
 {
     int a;
     double b, sum, avg;
@@ -1452,10 +1548,8 @@ int main()
         scanf("%lf", &b);
         sum +=b;
     }
-
     avg = sum/a;
     printf("%.4lf\n", avg);
-
     return 0;
 }
 ```
@@ -1466,11 +1560,10 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/4..png)
 
-```
+```c
 #include <stdio.h>
 
 int main()
-
 {
     int n, data;
     double avg, sum;
@@ -1492,23 +1585,20 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/5...png)
 
-```
+```c
 #include <stdio.h>
 
 int main()
-
 {
     int n, data, max=-1;
     scanf("%d", &n);
     for(int i=0; i<n; i++)
     {
         scanf("%d", &data);
-
         if(data>max)
         {
             max = data;
         }
-
     }
      printf("%d", max);
     return 0;
@@ -1552,11 +1642,10 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/7..png)
 
-```
+```c
 #include <stdio.h>
 
 int main()
-
 {
     int n, j=0, y=0, t=0, sum=0;        //要记得赋初值哟！
     int a, b, c;        //a,b,c的意思是每天所取得的金牌银牌铜牌的数量
@@ -1578,7 +1667,7 @@ int main()
 
 ------
 
-### *08:多边形内角和
+### ★08:多边形内角和
 
 ![](https://tyy.tanyaodan.com/ch0105/8..png)
 
@@ -1586,7 +1675,6 @@ int main()
 #include <stdio.h>
 
 int main()
-
 {
     int n;
     scanf("%d", &n);
@@ -1608,11 +1696,10 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/9..png)
 
-```
+```c
 #include <stdio.h>
 
 int main()
-
 {
     int m, n, i, sum=0;
     scanf("%d %d", &m, &n);
@@ -1635,11 +1722,10 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/10..png)
 
-```
+```c
 #include <stdio.h>
 
 int main()
-
 {
     int m, n, sum=0, i;
     scanf("%d %d", &m, &n);
@@ -1661,11 +1747,10 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/11..png)
 
-```
+```c
 #include <stdio.h>
 
 int main()
-
 {
     int k, c1=0, c2=0, c3=0, data;
     scanf("%d", &k);
@@ -1701,7 +1786,7 @@ int main()
 
 ------
 
-### *12:与指定数字相同的数的个数
+### ★12:与指定数字相同的数的个数
 
 ![](https://tyy.tanyaodan.com/ch0105/12..png)
 
@@ -1709,7 +1794,6 @@ int main()
 #include <stdio.h>
 
 int main()
-
 {
     int n, m, cnt = 0;
     scanf("%d %d", &n, &m);
@@ -1733,12 +1817,11 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/13..png)
 
-```
+```c
 #include <stdio.h>
 #include <math.h>
 
 int main()
-
 {
     int a, n, ans;
     scanf("%d %d", &a, &n);
@@ -1754,7 +1837,7 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/14.0.png)
 
-```
+```c
 #include <stdio.h>
 #include <math.h>
 
@@ -1778,19 +1861,20 @@ int main()
 
 ![](https://tyy.tanyaodan.com/ch0105/15.0.png)
 
-```
+```c
 #include <stdio.h>
 #include <math.h>
 int main()
-
 {
     double r, m, y, t1, t2, ans1;
     scanf("%lf %lf %lf", &r, &m, &y);
     t1 = 1+0.01*r;
     t2 = pow(t1,y);
     ans1 = m*t2;
-
     printf("%d", (int)ans1);
     return 0;
 }
 ```
+
+------
+
