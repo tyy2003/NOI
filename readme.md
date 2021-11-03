@@ -1878,3 +1878,44 @@ int main()
 
 ------
 
+
+
+
+
+
+
+------
+
+### 26:统计满足条件的4位数个数
+
+![](https://tyy.tanyaodan.com/ch0105/26.png)
+
+```
+#include <stdio.h>
+
+int main()
+{
+    int n, data;
+    int g, s, b, q;
+    int sum=0;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d", &data);
+
+        q=data/1000;
+        b=(data-1000*q)/100;
+        s=(data-1000*q-100*b)/10;
+        g=data%10;
+
+        if(g-q-b-s>0)
+        {
+            sum+=1;
+        }
+    }
+
+    printf("%d", sum);
+    return 0;
+}
+```
+
