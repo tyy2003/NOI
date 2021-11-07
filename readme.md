@@ -1479,7 +1479,7 @@ int main()
 
 ### 01:求平均年龄
 
-![](https://tyy.tanyaodan.com/ch0105/1..png)
+![](https://tyy.tanyaodan.com/ch0105/1.png)
 
 ```c
 #include <stdio.h>
@@ -1532,7 +1532,7 @@ int main()
 
 ### 03:均值
 
-![](https://tyy.tanyaodan.com/ch0105/3..png)
+![](https://tyy.tanyaodan.com/ch0105/3.png)
 
 ```c
 #include <stdio.h>
@@ -1558,7 +1558,7 @@ int main()
 
 ### 04:求整数的和与均值
 
-![](https://tyy.tanyaodan.com/ch0105/4..png)
+![](https://tyy.tanyaodan.com/ch0105/4.png)
 
 ```c
 #include <stdio.h>
@@ -1583,7 +1583,7 @@ int main()
 
 ### 05:最高的分数
 
-![](https://tyy.tanyaodan.com/ch0105/5...png)
+![](https://tyy.tanyaodan.com/ch0105/5.png)
 
 ```c
 #include <stdio.h>
@@ -1609,9 +1609,9 @@ int main()
 
 ### 06:整数序列的元素最大跨度值
 
-![](https://tyy.tanyaodan.com/ch0105/6..png)
+![](https://tyy.tanyaodan.com/ch0105/6.png)
 
-```
+```c
 #include <stdio.h>
 
 int main()
@@ -1640,7 +1640,7 @@ int main()
 
 ### 07:奥运奖牌计数
 
-![](https://tyy.tanyaodan.com/ch0105/7..png)
+![](https://tyy.tanyaodan.com/ch0105/7.png)
 
 ```c
 #include <stdio.h>
@@ -1669,7 +1669,7 @@ int main()
 
 ### ★08:多边形内角和
 
-![](https://tyy.tanyaodan.com/ch0105/8..png)
+![](https://tyy.tanyaodan.com/ch0105/8.png)
 
 ```c
 #include <stdio.h>
@@ -1694,7 +1694,7 @@ int main()
 
 ### 09:奇数求和
 
-![](https://tyy.tanyaodan.com/ch0105/9..png)
+![](https://tyy.tanyaodan.com/ch0105/9.png)
 
 ```c
 #include <stdio.h>
@@ -1720,7 +1720,7 @@ int main()
 
 ### 10:满足条件的数累加
 
-![](https://tyy.tanyaodan.com/ch0105/10..png)
+![](https://tyy.tanyaodan.com/ch0105/10.png)
 
 ```c
 #include <stdio.h>
@@ -1745,7 +1745,7 @@ int main()
 
 ### 11:整数的个数
 
-![](https://tyy.tanyaodan.com/ch0105/11..png)
+![](https://tyy.tanyaodan.com/ch0105/11.png)
 
 ```c
 #include <stdio.h>
@@ -1788,7 +1788,7 @@ int main()
 
 ### ★12:与指定数字相同的数的个数
 
-![](https://tyy.tanyaodan.com/ch0105/12..png)
+![](https://tyy.tanyaodan.com/ch0105/12.png)
 
 ```c
 #include <stdio.h>
@@ -1815,7 +1815,7 @@ int main()
 
 ### 13:乘方计算
 
-![](https://tyy.tanyaodan.com/ch0105/13..png)
+![](https://tyy.tanyaodan.com/ch0105/13.png)
 
 ```c
 #include <stdio.h>
@@ -1835,7 +1835,7 @@ int main()
 
 ### 14:人口增长问题
 
-![](https://tyy.tanyaodan.com/ch0105/14.0.png)
+![](https://tyy.tanyaodan.com/ch0105/14.png)
 
 ```c
 #include <stdio.h>
@@ -1859,7 +1859,7 @@ int main()
 
 ### 15:银行利息
 
-![](https://tyy.tanyaodan.com/ch0105/15.0.png)
+![](https://tyy.tanyaodan.com/ch0105/15.png)
 
 ```c
 #include <stdio.h>
@@ -1878,19 +1878,202 @@ int main()
 
 ------
 
+### ★★16:买房子
 
+![](https://tyy.tanyaodan.com/ch0105/16.png)
 
+```c
+#include <stdio.h>
 
+//这种题可以用来练习函数,年薪n万,增长率k,房价price万
+int buyHouse(int n, int k)
+{
+    double price = 200;  //单位:万
+    int deposit = 0; //存款
+    for(int i = 1; i <= 20; i++)
+    {
+        deposit += n;
+        // price += 0.01*k*price; //如果刚发工资房价就马上涨的话不吃不喝也买不起
+        // printf("第%d年房价%.2lf 存款%d\n", i, price, deposit);
+        if(deposit >= price)
+        {
+            return i; //买下!返回年份
+        }
+        price += 0.01*k*price; //房子每年增长k%的价格
+    }
+    return 0; //买不起
+}
 
-
+int main()
+{
+    int n, k;
+    scanf("%d %d", &n, &k);
+    int ans = buyHouse(n, k);
+    if(ans) //不为0
+    {
+        printf("%d\n", ans);
+    }
+    else
+    {
+        printf("Impossible");
+    }
+    return 0;
+}
+```
 
 ------
+
+### ★★★17:菲波那契数列
+
+![](https://tyy.tanyaodan.com/ch0105/17.png)
+
+```c
+#include <stdio.h>
+typedef long long ll;
+
+//方法1 迭代 速度更快
+ll fibonacci(int n)
+{
+    ll f = 0, g = 1;
+    while(n--)
+    {
+        g += f;
+        f = g-f;
+    }
+    return f;
+}
+//方法2 递归 代码更容易理解
+ll fib(int n)
+{
+    if(n < 2)
+    {
+        return n;
+    }
+    return fib(n-1) + fib(n-2); //每个数都等于前面2个数的和
+}
+
+int main()
+{
+    int k;
+    scanf("%d", &k);
+    printf("%lld\n", fibonacci(k));
+    //printf("%lld\n", fib(k));
+    return 0;
+}
+```
+
+------
+
+### ★18:鸡尾酒疗法
+
+![](https://tyy.tanyaodan.com/ch0105/18.1.png)
+
+![](https://tyy.tanyaodan.com/ch0105/18.2.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int c, d; //鸡尾酒疗法的数据
+    scanf("%d %d", &c, &d); //总病例数c, 有效疗效数d
+    double x = (double)d/c; //鸡尾酒疗法的有效率
+    for(int i = 1; i < n; i++)  //n-1行各种改进疗法的数据
+    {
+        int t1, t2;
+        scanf("%d %d", &t1, &t2);
+        double y = (double)t2/t1; //新疗法的有效率
+        if((y-x) > 0.05)
+        {
+            printf("better\n");
+        }
+        else if((x-y) > 0.05)
+        {
+            printf("worse\n");
+        }
+        else
+        {
+            printf("same\n");
+        }
+    }
+    return 0;
+}
+
+```
+
+------
+
+### ★19:救援
+
+![](https://tyy.tanyaodan.com/ch0105/19.1.png)
+
+![](https://tyy.tanyaodan.com/ch0105/19.2.png)
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    double sum = 0;
+    for(int i=0; i<n; i++)
+    {
+        double x, y; //平面坐标点(x,y)
+        int w; //人数w
+        scanf("%lf %lf %d", &x, &y, &w);  //坐标点是实数!
+        double d = sqrt(x*x + y*y); //原点到平面坐标点的距离
+        sum += 2*d/50; //往返时间
+        sum += w*(1.5);  //上船下船
+    }
+    int ans = ceil(sum);
+    printf("%d\n", ans);
+    return 0;
+}
+```
+
+------
+
+### ★20:球弹跳高度的计算
+
+![](https://tyy.tanyaodan.com/ch0105/20.1.png)
+
+![](https://tyy.tanyaodan.com/ch0105/20.2.png)
+
+```c
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double h;  //初始高度
+    double sum = 0;  //共经过的米数
+    scanf("%lf", &h);
+    double ans = h/(pow(2,10)); //第10次弹跳的高度
+    for(int i=0; i<10; i++)
+    {
+        sum += h;
+        h /= 2;
+        if(i < 9) sum += h;
+    }
+    printf("%g\n%g", sum, ans);
+    return 0;
+}
+```
+
+------
+
+
+
+
 
 ### 26:统计满足条件的4位数个数
 
 ![](https://tyy.tanyaodan.com/ch0105/26.png)
 
-```
+```c
 #include <stdio.h>
 
 int main()
@@ -1913,8 +2096,51 @@ int main()
             sum+=1;
         }
     }
-
     printf("%d", sum);
+    return 0;
+}
+```
+
+------
+
+
+
+
+
+## 1.7编程基础之字符串
+
+### 02:找第一个只出现一次的字符
+
+##### WA代码：第二个for循环是按照字母表顺序遍历的，如果输入的测试用例是za 正确答案应该是z，实际输出是a。解决这个问题的办法就是把for循环的遍历条件更改成输入的字符串的顺序即可。
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char a[100001];
+    gets(a);
+    int cnt[26];   //cnt数组用来统计小写字母出现的次数
+    memset(cnt, 0, sizeof(cnt));
+    for(int i = 0; i < strlen(a); i++) //strlen(a)是实际上输入的字符个数而不是声明时给的长度
+    {
+        cnt[a[i]-'a']++;  //
+    }
+    int flag = 0; //找到1,没有找到0
+    for(int i = 0; i < sizeof(cnt); i++)
+    {
+        if(cnt[i] == 1)
+        {
+            flag = 1;
+            printf("%c\n", 'a'+i);
+            break;
+        }
+    }
+    if(flag == 0)
+    {
+        printf("no");
+    }
     return 0;
 }
 ```
