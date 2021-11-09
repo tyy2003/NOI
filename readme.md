@@ -2103,15 +2103,144 @@ int main()
 
 ------
 
+ 
 
+## 1.6编程基础之一维数组
+
+### ★01:与指定数字相同的数的个数
+
+![](https://tyy.tanyaodan.com/ch0106/1.1.png)
+
+![](https://tyy.tanyaodan.com/ch0106/1.2.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int a[101];
+    memset(a, 0, sizeof(a));
+    for(int i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    int m, cnt = 0;
+    scanf("%d", &m);
+    for(int i = 0; i < n; i++)
+    {
+        if(a[i] == m)
+        {
+            cnt++;
+        }
+    }
+    printf("%d\n", cnt);
+    return 0;
+}
+```
+
+------
+
+### ★02:陶陶摘苹果
+
+![](https://tyy.tanyaodan.com/ch0106/2.1.png)
+
+![](https://tyy.tanyaodan.com/ch0106/2.2.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a[11];
+    memset(a, 0, sizeof(a));
+    for(int i = 1; i <= 10; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    int m;
+    scanf("%d", &m); //陶陶身高
+    m += 30;  //陶陶有个30cm的板凳
+    int cnt = 0;
+    for(int i = 1; i <= 10; i++)
+    {
+        if(a[i] <= m)
+        {
+            cnt++;
+        }
+    }
+    printf("%d\n", cnt);
+    return 0;
+}
+```
+
+------
+
+### 03:计算书费
+
+![](https://tyy.tanyaodan.com/ch0106/3.1.png)
+
+
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int num[11];
+    memset(num, 0, sizeof(num));
+    for(int i = 1; i <= 10; i++)
+    {
+        scanf("%d", &num[i]);
+    }
+    double price[11]={0, 28.9, 32.7, 45.6, 78, 35, 86.2, 27.8, 43, 56, 65};
+    double sum = 0;
+    for(int i = 1; i <= 10; i++)
+    {
+        sum += price[i]*num[i];
+    }
+    printf("%.1lf", sum);
+    return 0;
+}
+```
 
 
 
 ## 1.7编程基础之字符串
 
-### 02:找第一个只出现一次的字符
+### ★01:统计数字字符个数
 
-##### WA代码：第二个for循环是按照字母表顺序遍历的，如果输入的测试用例是za 正确答案应该是z，实际输出是a。解决这个问题的办法就是把for循环的遍历条件更改成输入的字符串的顺序即可。
+![](https://tyy.tanyaodan.com/ch0107/1.png)
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char a[256];
+    gets(a);
+    int cnt = 0;
+    for(int i = 0; i < strlen(a); i++)
+    {
+        if(a[i]>='0' && a[i]<='9')
+        {
+            cnt++;
+        }
+    }
+    printf("%d\n", cnt);
+    return 0;
+}
+```
+
+------
+
+### ★★02:找第一个只出现一次的字符
+
+![](https://tyy.tanyaodan.com/ch0107/2.png)
+
+WA代码：第二个for循环是按照字母表顺序遍历的，如果输入的测试用例是za 正确答案应该是z，实际输出是a。解决这个问题的办法就是把for循环的遍历条件更改成输入的字符串的顺序即可。
 
 ```c
 #include <stdio.h>
@@ -2141,6 +2270,33 @@ int main()
     {
         printf("no");
     }
+    return 0;
+}
+```
+
+```c++
+#include <bits/stdc++.h>  //万能头文件
+using namespace std;    //命名空间
+
+int main()
+{
+    string s;   //声明一个string型字符串
+    getline(cin, s);  //获取一行输入的字符串
+    int cnt[26];
+    memset(cnt, 0, sizeof(cnt));
+    for(int i = 0; i < s.length(); i++)
+    {
+        cnt[s[i]-'a']++;
+    }
+    for(int i = 0; i < s.length(); i++)
+    {
+        if(cnt[s[i]-'a'] == 1)
+        {
+            cout << s[i] << endl; //cout输出 endl换行
+            return 0;
+        }
+    }
+    printf("no");
     return 0;
 }
 ```
